@@ -13,19 +13,19 @@
         touch:true,             // true || false. default true. Turn on touch events for mobile
         keyPress: false,        // true || false, default false. Use left and right keyboard keys to control Distractful slides   
         imageLoaded: function(){
-            console.log('images loaded, ready to slide')
+            // console.log('images loaded, ready to slide')
         },
         slideComplete: function(){
-            console.log('slide done sliding')
+            // console.log('slide done sliding')
         },
         slideRight: function(){
-            console.log('slide right done')
+            // console.log('slide right done')
         },
         slideLeft: function(){
-            console.log('slide left done')
+            // console.log('slide left done')
         },
         beforeSlide: function(){
-            console.log('loaded before sliding')
+            // console.log('loaded before sliding')
         }
     });
 

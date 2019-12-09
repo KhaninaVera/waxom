@@ -442,7 +442,7 @@
     padding:0 10px;
     margin: 0;
   }
-  .date_month {
+  /*.date_month {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -477,11 +477,11 @@
     padding: 7px 7px 7px 12px;
     font-size: 12px;
   }
-
+*/
   .photo-gallery:hover > .date_month {
    /* border: 1px solid rgba(255,255,255,.5);*/
     border-color: transparent;
-    border-radius: 3px;
+    border-radius: 5px;
   }
 
   .photo-gallery:hover > .date_month > .date > p {
@@ -2857,9 +2857,6 @@ width: 100%;
 
 
 
-
-
-
 @media (max-width: 480px) {
 
   body {
@@ -2934,8 +2931,8 @@ width: 100%;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     position: relative;
@@ -2959,19 +2956,47 @@ width: 100%;
   }
 
   .menu {
-    display: none;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     margin: 0px;
+    text-align: right;
+
+  }
+/*................................................*/
+  .menu__icon{
+    display: inline-block;
+    color: #ffffff;
+  }
+  
+  .menu__links {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 102px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: auto;
+  }
+  
+  .menu__links-item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
   }
 
+
+/*....................................................*/
   nav a {
     font-size: 16px;
     color: #ffffff;
@@ -2990,19 +3015,22 @@ width: 100%;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     text-align: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding: 30px;
     margin: 110px 0px 0px 0px;
     color: #FFFFFF;
   }
+
+    
+
 
   h3 {
     font-family: 'Raleway Medium', Medium, sans-serif;
@@ -3099,6 +3127,7 @@ width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+            align-items: center;
   }
 
   .services {
@@ -3129,6 +3158,7 @@ width: 100%;
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
+    align-items: center;
     max-width: 280px;
     padding: 15px;
   }

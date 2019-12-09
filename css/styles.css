@@ -142,6 +142,83 @@ nav ul {
   margin: 10px;
 }
 
+.menu__icon {
+   display: none;
+   width: 45px;
+   height: 35px;
+   position: relative;
+   cursor: pointer;
+   /*left: 160px;*/
+}
+
+.menu_icon {
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 7px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.menu_icon:nth-child(1) {
+  top: 0px;
+}
+
+.menu_icon:nth-child(2), .menu__icon span:nth-child(3) {
+  top: 13px;
+}
+
+.menu_icon:nth-child(4) {
+  top: 26px;
+ }
+
+.menu__links-item {
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  list-style: none;
+  display: block;
+  padding: 5px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: .2s ease-in-out;
+  margin: 5px;
+}
+
+.menu__links-item:hover {
+      color: #998675;
+  text-decoration: none;
+}
+
+.menu.menu_state_open .menu_icon:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu.menu_state_open .menu_icon:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menu.menu_state_open  .menu_icon:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menu.menu_state_open  .menu_icon:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu.menu_state_open .menu__links {
+  display: block;  
+}
+
 .slogan {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,7 +377,7 @@ button:hover {
   font-size: 20px;
   color: #ffffff;
   margin: 0 10px;
-  transition: 0.2s;
+  transition: .3s ease-in-out;
 }
 
 .fas:hover {
@@ -314,6 +391,7 @@ button:hover {
   -ms-grid-row-align: center;
   align-self: center;
   margin: 10px;
+  transition: .3s ease-in-out;
 }
 
 .fa-pen-nib, .fas.fa-layer-group, .fa-cog, .fa-folder-open {
@@ -322,6 +400,7 @@ button:hover {
   cursor: pointer;
   transition: 0.2s ease-in-out;
   margin: 10px;
+  transition: .3s ease-in-out;
 }
 
 .line {
@@ -331,6 +410,7 @@ button:hover {
   width: 50px;
   height: 3px;
   background-color: #F2EFEA;
+  transition: .3s ease-in-out;
 }
 
 .service:hover > .service-figcaption {
@@ -553,6 +633,7 @@ button:hover {
   font-size: 15px;
   cursor: pointer;
   transition: .3s ease-in-out;
+
 }
 
 .photo {
@@ -564,9 +645,9 @@ button:hover {
   transition: .3s ease-in-out;
  -moz-transition: all 0.5s ease-out;
  -o-transition: all 0.5s ease-out;
- -webkit-transition: all 0.5s ease-out;
-
+ -webkit-transition: all .3s ease-out;
 }
+
 .photo:hover  {
   -webkit-filter: brightness(40%);
   filter: brightness(40%);
@@ -575,6 +656,7 @@ button:hover {
 span {
   font-family: 'Montserrat Light', sans-serif;
   font-size: 15px;
+  transition: .3s ease-in-out;
 }
 
 figcaption {
@@ -583,7 +665,9 @@ figcaption {
   color: #998675;
   padding:0 15px;
   margin: 0;
+  transition: .3s ease-in-out;
 }
+
 
 .date_month {
   display: -webkit-box;
@@ -598,33 +682,50 @@ figcaption {
   justify-content: center;
   position: absolute;
   margin: 15px;
-  border-radius: 3px;
+  border-radius: 5px;
   border: 1px solid;
   border-color: inherit;
   z-index: 5;
+transition: .3s ease-in-out;
+ 
+   
 }
 
 .date p {
-  display: block;
+  display: flex;
   background-color: #363636;
   color: #fff;
   margin: 0;
   padding: 0 12px;
   font-size: 20px;
+  border-radius: 5px;
+  position: absolute;
+   width: 50px;
+  height: 30px;
+    font-size: 20px;
+  transition: .3s ease-in-out;
+    z-index: 4;
 }
 
 .month p {
-  display: block;
+  display: flex;
   background-color: #252525;
   color: #fff;
   margin: 0;
   padding: 7px 7px 7px 12px;
   font-size: 12px;
+  position: absolute;
+  border-radius: 5px;
+  top: 23px;
+  width: 50px;
+  height: 30px;
+  transition: .3s ease-in-out;
+
 }
 
 .photo-gallery:hover > .date_month {
   border: 1px solid rgba(255,255,255,.5);
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .photo-gallery:hover > .date_month > .date > p {
@@ -651,6 +752,7 @@ p {
   font-size: 14px; 
   padding: 0 15px; 
   margin: 0;
+  transition: .3s ease-in-out;
 }
 
 .video {
@@ -689,11 +791,12 @@ p {
   align-items: center;
   padding: 50px;
 }
+
 .far.fa-play-circle {
   font-size: 70px;
   color: #FEFEFE;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: .3s ease-in-out;
   margin: 10px;
 }
 
