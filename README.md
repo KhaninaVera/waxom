@@ -1,1 +1,2 @@
 # waxom
+Landing page Waxom
